@@ -1,1 +1,54 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+    "spacing": 8,
+    "margin-top": 6,
+    "margin-left": 6,
+    "margin-right": 6,
 
+    // ==== LEFT ====
+    "modules-left": ["clock"],
+
+    // ==== CENTER ====
+    "modules-center": ["hyprland/workspaces"],
+
+    // ==== RIGHT ====
+    "modules-right": ["cpu", "memory", "network#wifi"],
+
+    // -------------------------------------------------
+    // MODULE DEFINITIONS
+    // -------------------------------------------------
+    "clock": {
+        "format": "{:%H:%M}",          // 24 h only
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "all-outputs": true,
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "cpu": {
+        "format": "󰍛 {usage}%",
+        "tooltip": false,
+        "interval": 2
+    },
+
+    "memory": {
+        "format": "󰘚 {}%",
+        "tooltip": false,
+        "interval": 5
+    },
+
+    "network#wifi": {
+        "interface": "wlan0",          // change if your interface is different
+        "format-wifi": "󰖩 {signalStrength}%",
+        "format-disconnected": "󰖪",
+        "tooltip": false,
+        "interval": 10
+    }
+}
