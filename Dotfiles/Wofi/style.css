@@ -1,60 +1,39 @@
-* {
-    font-family: Sans;  /* Or your preferred font, e.g., "JetBrains Mono" */
-    font-size: 14px;
+/* -------------------------------------------------
+   Wofi – curved, thick-border, light-text theme
+   ------------------------------------------------- */
+
+window {
+    background-color: rgba(30, 30, 30, 0.92);   /* dark semi-transparent bg */
+    border: 4px solid #cdd6f4;                /* thick light border   */
+    border-radius: 18px;                       /* curved corners       */
+    font-family: "Inter", "Font Awesome 6 Free Solid";
+    font-size: 13px;
 }
 
-#window {
-    background-color: rgba(0, 0, 0, 0.8);  /* Dark semi-transparent background */
-    border: 3px solid #FF3399;  /* Neon magenta-ish border */
-    border-radius: 20px;  /* Rounded/circular window */
-    box-shadow: 0 0 12px #FF3399;  /* Neon magenta glow */
-    padding: 10px;  /* Space inside window */
-}
-
+/* Prompt (search box) */
 #input {
-    background-color: rgba(0, 0, 0, 0.7);  /* Slightly darker search box */
-    color: #FF3399;  /* Neon magenta text */
-    border: 2px solid #FF3399;  /* Neon magenta border */
-    border-radius: 50px;  /* Pill-like shape */
-    padding: 8px 12px;  /* Adjusted padding */
-    margin: 10px 15px;  /* Space around search box */
-    box-shadow: 0 0 8px #FF3399;  /* Neon glow */
-    transition: all 0.3s ease-in-out;  /* Smooth transition for focus */
+    margin: 12px 12px 8px 12px;
+    padding: 10px;
+    background-color: #1e1e2e;
+    color: #cdd6f4;               /* white-ish text */
+    border-radius: 12px;
+    border: none;
 }
 
-#input:focus {
-    border-color: #FFFFFF;  /* White border on focus for contrast */
-    box-shadow: 0 0 10px #FF3399;  /* Enhanced magenta glow when typing */
-}
-
+/* Each entry (app line) */
 #entry {
-    color: #FF3399;  /* Neon magenta text for app entries */
-    background-color: rgba(0, 0, 0, 0.6);  /* Dark background for entries */
-    border: 1px solid #FF3399;  /* Neon magenta border for each app */
-    border-radius: 15px;  /* Rounded, capsule-like entries */
-    padding: 8px 12px;  /* Space inside entries */
-    margin: 5px 10px;  /* Space between entries */
-    transition: all 0.3s ease-in-out;  /* Smooth animation */
+    padding: 8px 14px;
+    color: #cdd6f4;               /* white-ish */
 }
 
+/* Highlighted (selected) entry */
 #entry:selected {
-    background-color: rgba(255, 51, 153, 0.3);  /* Neon magenta tint (using #FF3399 with alpha) */
-    color: #FFFFFF;  /* White text for readability */
-    border: 2px solid #FF3399;  /* Thicker neon magenta border */
-    border-radius: 15px;  /* Keep rounded shape */
-    text-shadow: 0 0 5px #FF3399;  /* Glowing text */
-    box-shadow: inset 0 0 8px rgba(255, 51, 153, 0.6), 0 0 10px #FF3399;  /* Inner + outer neon glow */
+    background-color: #89b4fa;
+    color: #1e1e2e;
+    border-radius: 10px;
 }
 
-#text {
-    color: #FF3399;  /* Neon magenta text */
-    text-shadow: 0 0 3px #FF3399;  /* Light magenta glow */
-}
-
+/* Scrollbar (optional, keeps it thin) */
 #scroll {
-    margin: 0px;
-}
-
-#inner-box {
-    background-color: transparent;
+    margin: 0 8px;
 }
